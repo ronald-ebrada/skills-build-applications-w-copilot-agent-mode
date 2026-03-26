@@ -8,7 +8,7 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'created_at')
-    filter_horizontal = ('members',)
+    # filter_horizontal removed: 'members' is not a ManyToManyField
 
 @admin.register(Activity)
 class ActivityAdmin(admin.ModelAdmin):
